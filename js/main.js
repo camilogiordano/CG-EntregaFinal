@@ -47,6 +47,26 @@ let productos = [
     new Producto("Lámpara Radiohead", "../assets/escultura-3.png", "Escultura con luz interna del álbum The Bends de Radiohead", 45000)
 ];
 
+
+let boton = document.querySelector('button')
+let modo = localStorage.getItem('modo')
+if(modo){
+    document.body.className = modo
+}
+boton.onclick = ()=> {
+    if(document.body.className == 'modo-claro'){
+        document.body.className = 'modo-oscuro'
+    } else{
+        document.body.className = 'modo-claro'
+    }
+
+    let modo = document.body.className
+
+    localStorage.setItem('modo', modo)
+}
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const template = document.querySelector('template');
     const containerCards = document.querySelector("#container");

@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+header{
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.120);
+    padding: 15px 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 60px;
+}
+header nav div{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+}
+#carritocuenta{
+    background-color: rgb(255, 179, 0);
+    border-radius: 100%;
+    display: inline-block;
+    width: 20px;
+    aspect-ratio: 1;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+}
+
+#logo{
+    height: 60px;
+}
+
+header nav img{
+    height: 50px;
+}
+.cards{
+    display: flex;
+    flex-wrap: nowrap;
+    display: inline-flex;
+
+}
+.index-flex{
+    display: flex;
+    align-items: center;
+}
+.index-flex p{
+    padding: 75px;
+    
+}
+.index-flex img{
+    height: 250px;
+    width: auto;
+    padding-right: 50px;
+}
+h1{
+    text-align: center;
+    padding: 100px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+footer{
+    margin-top: auto;
+    box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.120);
+    text-align: right;
+    padding: 10px;
+}

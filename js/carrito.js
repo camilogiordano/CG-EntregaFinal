@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     mostrarCarrito();
     actualizarNuevoCarrito();
+
+    document.getElementById('comprar-todo').addEventListener('click', comprarTodo);
 });
 
 function mostrarCarrito() {
@@ -72,4 +74,23 @@ function actualizarNuevoCarrito() {
     let memoria = JSON.parse(localStorage.getItem("productos")) || [];
     let cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
     document.getElementById("carritocuenta").textContent = cuenta;
+}
+
+function comprarTodo() {
+    let memoria = JSON.parse(localStorage.getItem("productos")) || [];
+    if (memoria.length > 0) {
+        Swal.fire({
+            title: "Gracias por tu compra",
+            text: "Nos contactaremos a la brevedad.",
+            imageUrl: "https://scontent.flpg1-1.fna.fbcdn.net/v/t31.18172-8/10849001_1533850976882438_7965804757887488792_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=b895b5&_nc_ohc=CAJK9iGC7mAQ7kNvgF7Vluy&_nc_ht=scontent.flpg1-1.fna&cb_e2o_trans=t&oh=00_AYAVDlly5x3kcdsZrTHn8n-PnO1irc5F94FIWxEz8Ytkqw&oe=66C0EE88",
+            imageWidth: 400,
+            imageHeight: 300,
+            imageAlt: "Custom image"
+            });
+        localStorage.removeItem("productos");
+        mostrarCarrito();
+        actualizarNuevoCarrito();
+    } else {
+        alert("El carrito está vacío");
+    }
 }

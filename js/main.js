@@ -48,22 +48,7 @@ let productos = [
 ];
 
 
-let boton = document.querySelector('button')
-let modo = localStorage.getItem('modo')
-if(modo){
-    document.body.className = modo
-}
-boton.onclick = ()=> {
-    if(document.body.className == 'modo-claro'){
-        document.body.className = 'modo-oscuro'
-    } else{
-        document.body.className = 'modo-claro'
-    }
 
-    let modo = document.body.className
-
-    localStorage.setItem('modo', modo)
-}
 
 
 

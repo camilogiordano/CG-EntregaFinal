@@ -1,3 +1,4 @@
+
 function agregarAlCarrito(item) {
     let memoria = JSON.parse(localStorage.getItem("productos")) || [];
     let nuevoItem = getNuevoProductoParaMemoria(item);
@@ -30,6 +31,11 @@ function actualizarNuevoCarrito() {
     let cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
     document.getElementById("carritocuenta").textContent = cuenta;
 }
+
+fetch('')
+    .then((response)=> response.json())
+    .then((datos)=> console.log(datos))
+    .catch((error)=> console.log(error))
 
 
 class Producto {

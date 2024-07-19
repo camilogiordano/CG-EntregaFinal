@@ -1,0 +1,7 @@
+[
+    {"nombre":"Mora y los metegoles", "descripcion":"Arte de tapa para Mora y los metegoles", "img":"../assets/trabajo1.png"},
+    {"nombre":"El mudito antisocial", "descripcion":"Videoclip realizado para El mudito antisocial", "img":"../assets/trabajo2.png"},
+    {"nombre":"Lorem", "descripcion":"Videoclip realizado para la banda Lorem", "img":"../assets/trabajo3.png"},
+    {"nombre":"0221", "descripcion":"Trabajo realizado para el programa de stream No es una copia del diario digital 0221", "img":"../assets/trabajo4.png"}
+    
+]
